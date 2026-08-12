@@ -4,8 +4,8 @@ Aprendeizaje Automático y Minería de Datos
 Dataset: Bike Sharing (UC Irvine Machine Learning Repository)
 Varaible respuesta: cnt (total de alquileres de bicicletas)
 Autores:
-   - Esteban Quitian 
-   - Oscar Beltran
+   - Esteban Quitian @equitian04
+   - Oscar Beltran @oscarbeltran12
    - Jhederith Quitian @jhederith
 """
 
