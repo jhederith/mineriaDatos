@@ -44,4 +44,4 @@ except FileNotFoundError:
     exit()
 
 
-# --- Testing pipeline (Sec scans) ---
+# --- Testing pipeline (Sec scans v2 for pipleines, remember to add Esteban and Oscar) ---
