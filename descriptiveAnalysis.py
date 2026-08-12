@@ -40,4 +40,4 @@ except FileNotFoundError:
     exit()
 
 
-# Testing pipeline
+# Testing pipeline (Sec scans)
