@@ -6,7 +6,7 @@ Varaible respuesta: cnt (total de alquileres de bicicletas)
 Autores:
    - Esteban Quitian 
    - Oscar Beltran
-   - Jhederith Quitian 
+   - Jhederith Quitian @jhederith
 """
 
 import pandas as pd 
