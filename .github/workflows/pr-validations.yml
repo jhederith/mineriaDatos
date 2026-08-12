@@ -6,4 +6,5 @@ on:
 
 jobs: 
     validation:
-        uses: jhederith/darkha/.github/workflows/pr-validation.yml@main
+        uses: jhederith/.github/workflows/pr-validation.yml@main
+        
