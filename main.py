@@ -13,12 +13,13 @@ import sys
 import os
 from tabulate import tabulate
 
+
 # Inclusión del directorio src en el path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 
 from loader import cargar_y_preparar_datos
 from stats import analizar_distribuciones
-from correlations import analizar_correlaciones
+from correlations import analizar_correlaciones, demanda_por_hora
 
 def main():
     print("=" * 70)
@@ -26,7 +27,7 @@ def main():
     print("=" * 70)
 
     # 1. Cargar y estructurar datos
-    df, X_train, X_test, y_train, y_test = cargar_y_preparar_datos("hour.csv")
+    df, X_train, X_test, y_train, y_test = cargar_y_preparar_datos("data/hour.csv")
 
     # Mostrar información inicial en consola usando formato ASCII con tabulate
     print("\n[INFO] Vista previa del dataset (Primeras 3 filas):")
@@ -38,9 +39,12 @@ def main():
     # 3. Análisis de Correlaciones (Calcula coeficientes y genera los 2 gráficos bivariados)
     analizar_correlaciones(df)
 
+    #4. Demanda por hora
+    demanda_por_hora(df)
+
     print("\n" + "=" * 70)
-    print(" [EXITO] Proceso completado con éxito.")
-    print(" Los gráficos limpios han sido exportados a la carpeta /outputs para tu PDF.")
+    print(" Proceso completado con éxito.")
+    print(" Los gráficos se han creado y exportado a la carpeta /outputs.")
     print("=" * 70)
 
 if __name__ == "__main__":
