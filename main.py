@@ -14,7 +14,7 @@ import os
 from tabulate import tabulate
 
 
-# Inclusión del directorio src en el path
+# Inclusión del directorio src en el path para no tener problemas al importar los módulos
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 
 from loader import cargar_y_preparar_datos
@@ -26,6 +26,13 @@ def main():
     print(" PIPELINE DE ANÁLISIS DESCRIPTIVO - BIKE SHARING (UNIR)")
     print("=" * 70)
 
+    """
+    el pipelin consiste en 4 pasos:
+    1. Cargar y estructurar datos
+    2. Análisis de Distribuciones (Ejecuta estadísticas y genera los 2 gráficos univariados)
+    3. Análisis de Correlaciones (Calcula coeficientes y genera los 2 gráficos bivariados)
+    4. Demanda por hora (Genera un gráfico de demanda por hora)
+    """
     # 1. Cargar y estructurar datos
     df, X_train, X_test, y_train, y_test = cargar_y_preparar_datos("data/hour.csv")
 
