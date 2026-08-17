@@ -62,7 +62,7 @@ Archivo utilizado por el proyecto:
 
 - Jhederith Quitian Diaz
 - Esteban Quitian Diaz
-- Oscar Beltran
+- Oscar ivan Beltran
 
 ## Créditos de documentación
 
