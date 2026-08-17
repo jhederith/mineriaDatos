@@ -46,7 +46,7 @@ def main():
     # 3. Análisis de Correlaciones (Calcula coeficientes y genera los 2 gráficos bivariados)
     analizar_correlaciones(df)
 
-    #4. Demanda por hora
+    #4. Demanda por hora (Genera un gráfico de demanda por hora)
     demanda_por_hora(df)
 
     print("\n" + "=" * 70)
