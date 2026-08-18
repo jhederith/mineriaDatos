@@ -63,7 +63,7 @@ def demanda_por_hora(df):
     ax.plot(hourly_avg.index, hourly_avg.values, marker='o', linewidth=2, markersize=6, color="darkgreen")
     ax.fill_between(hourly_avg.index, hourly_avg.values, alpha=0.3, color="green")
 
-    ax.set_title('Promedio de alquileres (cnt) por hora del día')
+    ax.set_title('Promedio de alquiler (cnt) por hora del día')
     ax.set_xlabel('Hora del día (hr)')
     ax.set_ylabel('Alquileres promedio (cnt)')
     ax.set_xticks(range(0, 24))
