@@ -5,7 +5,7 @@ Dataset: Bike Sharing (UC Irvine Machine Learning Repository)
 Varaible respuesta: cnt (total de alquileres de bicicletas)
 Autores:
    - Esteban Quitian @quitian07
-   - Oscar Beltran @oscarbeltran12
+   - Oscar Beltran @oscari2606
    - Jhederith Quitian @jhederith
 """
 

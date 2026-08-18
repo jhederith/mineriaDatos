@@ -10,7 +10,7 @@ def analizar_correlaciones(df):
     print(" 3. ANÁLISIS DE CORRELACIONES (BIVARIADO) ")
     print("="*50)
 
-    # Cálculo de correlaciones con cnt
+    # aca realizamos el Cálculo de correlaciones con cnt
     numeric_df = df.select_dtypes(include=[np.number])
     correlations = numeric_df.corr()['cnt'].drop('cnt').sort_values(key=abs, ascending=False)
     
@@ -18,7 +18,7 @@ def analizar_correlaciones(df):
     for var, corr in list(correlations.items())[:5]:
         print(f"   - {var:12s}: {corr:+.3f}")
 
-    # Configuración de gráficos
+    # se realiza la Configuración de los gráficos
     fig, axes = plt.subplots(1, 2, figsize=(14, 5))
 
     # Gráfico de correlación 1: Temperatura vs cnt
@@ -56,7 +56,7 @@ def demanda_por_hora(df):
     print("Análisis temporal: demanda por hora del día")
     print("="*50)
 
-    #Pimero hay que agrupar los datos por hora
+    # Agrupacion de los datos por horas
     hourly_avg = df.groupby("hr")["cnt"].mean()
 
     fig, ax = plt.subplots(figsize=(12,5))
