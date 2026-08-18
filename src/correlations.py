@@ -10,7 +10,7 @@ def analizar_correlaciones(df):
     print(" 3. ANÁLISIS DE CORRELACIONES (BIVARIADO) ")
     print("="*50)
 
-    # aca realizamos el Cálculo de correlaciones con cnt
+    # En este fragmento realizamos el Cálculo de correlaciones con cnt
     numeric_df = df.select_dtypes(include=[np.number])
     correlations = numeric_df.corr()['cnt'].drop('cnt').sort_values(key=abs, ascending=False)
     
@@ -18,7 +18,7 @@ def analizar_correlaciones(df):
     for var, corr in list(correlations.items())[:5]:
         print(f"   - {var:12s}: {corr:+.3f}")
 
-    # se realiza la Configuración de los gráficos
+    # Se realiza la Configuración de los gráficos
     fig, axes = plt.subplots(1, 2, figsize=(14, 5))
 
     # Gráfico de correlación 1: Temperatura vs cnt
