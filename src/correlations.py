@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
 import os
 
 def analizar_correlaciones(df):
@@ -75,5 +76,33 @@ def demanda_por_hora(df):
 
     print("[INFO] Gráfico de demanda por hora guardado en outputs/03_demanda_por_hora.png")
 
+
+def analizar_matriz_correlacion(df):
+    """Se hace el cálculo y se genera la gráfica de la matríz de correlación"""
+    os.makedirs("outputs", exist_ok=True)
+
+    print("\n" + "="*50)
+    print(" 5. MATRIZ DE CORRELACIÓN ")
+    print("="*50)
+
+    # Seleccionamos solo variables numéricas
+    numeric_df = df.select_dtypes(include=[np.number])
     
+    # Calculamos la matriz de correlación
+    corr_matrix = numeric_df.corr()
+
+    # Configuramos el gráfico del mapa de calor
+    fig, ax = plt.subplots(figsize=(10, 8))
+    
+    # Dibujamos el mapa de calor con seaborn
+    sns.heatmap(corr_matrix, annot=True, fmt=".2f", cmap="coolwarm", 
+                cbar=True, square=True, linewidths=0.5, ax=ax, annot_kws={"size": 7})
+    
+    ax.set_title('Matriz de Correlación - Variables del Dataset', fontsize=12)
+
+    plt.tight_layout()
+    plt.savefig('outputs/04_matriz_correlacion.png', dpi=200)
+    plt.close()
+    
+    print("[INFO] Matriz de correlación guardada en outputs/04_matriz_correlacion.png")
     

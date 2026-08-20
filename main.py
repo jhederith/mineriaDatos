@@ -19,7 +19,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 
 from loader import cargar_y_preparar_datos
 from stats import analizar_distribuciones
-from correlations import analizar_correlaciones, demanda_por_hora
+from correlations import analizar_correlaciones, demanda_por_hora, analizar_matriz_correlacion
 
 def main():
     print("=" * 70)
@@ -48,6 +48,9 @@ def main():
 
     #4. Demanda por hora (Genera un gráfico de demanda por hora)
     demanda_por_hora(df)
+
+    #5. Matríz de correlación
+    analizar_matriz_correlacion(df)
 
     print("\n" + "=" * 70)
     print(" Proceso completado con éxito.")
