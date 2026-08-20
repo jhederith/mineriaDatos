@@ -32,3 +32,4 @@ def cargar_y_preparar_datos(ruta_csv="hour.csv"):
     print(f"[INFO] Conjunto de entrenamiento: {len(X_train)} obs. | Validación: {len(X_test)} obs.")
     
     return df, X_train, X_test, y_train, y_test
+

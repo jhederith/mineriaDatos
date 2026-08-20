@@ -1,63 +1,69 @@
-# Taller de Minería de Datos
+# Minería de Datos - Análisis Descriptivo (Bike Sharing)
 
-Este proyecto es parte del **taller de minería de datos**.  
-Se hace uso de **GitHub** y de la **colaboración en la nube** para aplicar buenas prácticas de programación, trabajo en equipo y control de versiones.
+Proyecto académico orientado al análisis descriptivo del dataset **Bike Sharing** de UC Irvine. El flujo incluye carga y preparación de datos, análisis univariado, análisis bivariado y visualización de demanda por hora.
 
-## Autores
+## Objetivo
 
-- Jhederith Quitian Diaz
-- Esteban Quitian Diaz
-- Oscar Beltran
+Analizar el comportamiento de la variable objetivo `cnt` (total de alquileres de bicicletas) y sus relaciones con variables relevantes como temperatura y humedad.
 
-## Contexto del proyecto
+## Estructura del proyecto
 
-El proyecto realiza una carga y análisis descriptivo inicial del dataset **Bike Sharing** de UC Irvine.  
-Archivo principal actual:
-
-- `descriptiveAnalysis.py`
-
-Fuente del dataset:
-
-- https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip
-
-## Clonación del repositorio
-
-```bash
-git clone https://github.com/jhederith/mineriaDatos.git
-cd mineriaDatos
+```text
+mineriaDatos/
+├── main.py
+├── requirements.txt
+├── data/
+│   └── hour.csv
+├── src/
+│   ├── loader.py
+│   ├── stats.py
+│   └── correlations.py
+└── outputs/
 ```
 
 ## Requisitos
 
-Se recomienda usar **Python 3.9+**.
+- Python 3.9 o superior
+- Dependencias en `requirements.txt`
 
-Librerías necesarias:
-
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-
-Instalación rápida:
+## Instalación
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+git clone https://github.com/jhederith/mineriaDatos.git
+cd mineriaDatos
+pip install -r requirements.txt
 ```
 
-## Ejecución del proyecto
-
-1. Descarga el dataset desde el enlace de UC Irvine.
-2. Descomprime el archivo zip.
-3. Copia `hour.csv` dentro de la carpeta raíz del proyecto (`mineriaDatos`).
-4. Ejecuta el script:
+## Ejecución
 
 ```bash
-python descriptiveAnalysis.py
+python main.py
 ```
 
-> Si `hour.csv` no está en la raíz del proyecto, el script mostrará un mensaje de error indicando cómo descargarlo.
+## Resultados esperados
 
----
+Al ejecutar el proyecto se generan gráficos en la carpeta `outputs/`:
 
-Este README es una base inicial; en futuras iteraciones se ampliará con más detalles del flujo de trabajo y mejoras del proyecto.
+- `01_distribuciones.png`
+- `02_correlaciones.png`
+- `03_demanda_por_hora.png`
+
+## Dataset
+
+Fuente oficial:
+
+- https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip
+
+Archivo utilizado por el proyecto:
+
+- `data/hour.csv`
+
+## Autores del proyecto
+
+- Jhederith Quitian Diaz
+- Esteban Quitian Diaz
+- Oscar ivan Beltran
+
+## Créditos de documentación
+
+Esta versión del README fue creada y estructurada por **GitHub Copilot Task Agent** para estandarizar la documentación con un formato profesional y buenas prácticas.
